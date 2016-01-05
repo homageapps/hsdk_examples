@@ -1,0 +1,48 @@
+{
+    "width":480,
+    "height":480,
+    "duration":6,
+    "fps":25,
+    "source_layers_info":[
+                          {
+                          "source_type":"png",
+                          "resource_name":"dark-side-480.png",
+                          "effects": [
+                                      {
+                                      "effect_type":"transform",
+                                      "time_units":"normalized",
+                                      "animation":[
+                                                   {"time":0.0, "scale":1.5, "rotate":[0,0,0]},
+                                                   {"time":1.0, "scale":1.5, "rotate":[0,0,360]}
+                                                   ]
+                                      },
+                                      ]
+                          },
+                          {
+                          "source_type":"video",
+                          "resource_name":"lebuff_capture.mov",
+                          "dynamic_mask_name":"lebuff_mask.mov",
+                          "effects": [
+                                      {
+                                      "effect_type":"mask",
+                                      "resource_name":"round-bottom-mask-480.png"
+                                      },
+                                      {
+                                      "effect_type":"transform",
+                                      "time_units":"normalized",
+                                      "animation":[
+                                                   {"time":0.0, "scale":0.05, "rotate":[0,0,0]},
+                                                   {"time":0.50, "scale":1.0, "rotate":[0,0,0]},
+                                                   {"time":0.75, "scale":1.0, "rotate":[0,0,-720]},
+                                                   {"time":0.80, "scale":1.0, "rotate":[0,0,-720]},
+                                                   {"time":1.0, "scale":0.05, "rotate":[0,0,-720]}
+                                                   ]
+                                      },
+                                      ]
+                          },
+                          {
+                          "source_type":"gif",
+                          "resource_name":"all-in-fg-480.gif",
+                          }
+                          ]
+}

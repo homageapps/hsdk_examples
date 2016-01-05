@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="HcZ-iR-DEf">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--ResultVC-->
+        <scene sceneID="BZG-Rq-nYn">
+            <objects>
+                <viewController id="HcZ-iR-DEf" customClass="ResultVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="tkm-gJ-yGc"/>
+                        <viewControllerLayoutGuide type="bottom" id="gfH-iQ-2wc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="oQF-uz-0NC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eWN-wY-KMV">
+                                <rect key="frame" x="-4" y="0.0" width="383" height="383"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="eWN-wY-KMV" secondAttribute="height" multiplier="1:1" id="r7R-xQ-tjv"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="zKM-sL-Ihj" kind="embed" identifier="embed video player" id="ECQ-eb-djd"/>
+                                </connections>
+                            </containerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Show some feedback and messages to the user here." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Bf-4H-2iH">
+                                <rect key="frame" x="12" y="391" width="351" height="16"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="65c-SK-EkK">
+                                <rect key="frame" x="16" y="603" width="343" height="44"/>
+                                <color key="backgroundColor" red="0.4823529412" green="0.7843137255" blue="0.1960784314" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="GUw-no-4xM"/>
+                                </constraints>
+                                <state key="normal" title="Render!">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onRenderButtonPressed:" destination="HcZ-iR-DEf" eventType="touchUpInside" id="x2I-YA-IuM"/>
+                                </connections>
+                            </button>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="n4W-IC-9eh">
+                                <rect key="frame" x="169" y="558" width="37" height="37"/>
+                                <color key="color" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </activityIndicatorView>
+                            <progressView hidden="YES" opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="n9R-k8-xNI">
+                                <rect key="frame" x="16" y="548" width="343" height="2"/>
+                            </progressView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="9Bf-4H-2iH" firstAttribute="leading" secondItem="oQF-uz-0NC" secondAttribute="leadingMargin" constant="-4" id="00c-lt-hOb"/>
+                            <constraint firstItem="n4W-IC-9eh" firstAttribute="centerX" secondItem="65c-SK-EkK" secondAttribute="centerX" id="BIg-Xs-R2R"/>
+                            <constraint firstItem="65c-SK-EkK" firstAttribute="top" secondItem="n4W-IC-9eh" secondAttribute="bottom" constant="8" id="Kqk-jm-A0l"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="65c-SK-EkK" secondAttribute="leading" id="NgM-Pn-riL"/>
+                            <constraint firstItem="gfH-iQ-2wc" firstAttribute="top" secondItem="65c-SK-EkK" secondAttribute="bottom" constant="20" id="RiV-iT-ekj"/>
+                            <constraint firstItem="n9R-k8-xNI" firstAttribute="width" secondItem="65c-SK-EkK" secondAttribute="width" id="Tsy-69-QPv"/>
+                            <constraint firstItem="eWN-wY-KMV" firstAttribute="top" secondItem="tkm-gJ-yGc" secondAttribute="bottom" constant="-20" id="URS-pw-x7j"/>
+                            <constraint firstItem="eWN-wY-KMV" firstAttribute="leading" secondItem="oQF-uz-0NC" secondAttribute="leadingMargin" constant="-20" id="YTX-ZG-Fwp"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="9Bf-4H-2iH" secondAttribute="trailing" constant="-4" id="Zj5-36-LV7"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="65c-SK-EkK" secondAttribute="trailing" id="bck-Tl-DSO"/>
+                            <constraint firstItem="9Bf-4H-2iH" firstAttribute="top" secondItem="eWN-wY-KMV" secondAttribute="bottom" constant="8" id="fND-zl-LgO"/>
+                            <constraint firstItem="n4W-IC-9eh" firstAttribute="top" secondItem="n9R-k8-xNI" secondAttribute="bottom" constant="8" id="fuI-wq-rZf"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="eWN-wY-KMV" secondAttribute="trailing" constant="-20" id="l6T-Z7-bC9"/>
+                            <constraint firstItem="n9R-k8-xNI" firstAttribute="centerX" secondItem="n4W-IC-9eh" secondAttribute="centerX" id="yOd-lk-yfs"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="guiActivity" destination="n4W-IC-9eh" id="hDQ-Zs-caX"/>
+                        <outlet property="guiMessageLabel" destination="9Bf-4H-2iH" id="9kC-ed-laW"/>
+                        <outlet property="guiProgress" destination="n9R-k8-xNI" id="eyc-Bz-0CM"/>
+                        <outlet property="guiRenderButton" destination="65c-SK-EkK" id="N6z-Hk-gjO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CIB-Z1-Twh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-792.5" y="915.5"/>
+        </scene>
+        <!--AV Player View Controller-->
+        <scene sceneID="BpT-ng-gda">
+            <objects>
+                <avPlayerViewController videoGravity="AVLayerVideoGravityResizeAspect" id="zKM-sL-Ihj" customClass="VideoVC" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kqd-N8-7kx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-281.5" y="915.5"/>
+        </scene>
+    </scenes>
+</document>

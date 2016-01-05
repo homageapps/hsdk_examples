@@ -1,0 +1,22 @@
+{
+    "width":480,
+    "height":480,
+    "duration":2,
+    "fps":12,
+    "source_layers_info":[
+                          {
+                          "source_type":"gif",
+                          "resource_name":"all-in-bg-480.gif",
+                          },
+                          {
+                          "source_type":"gif",
+                          "resource_name":"all-in-fg-480.gif",
+                          }
+                          ],
+    "outputs_info":[
+                    {
+                    "output_type":"video",
+                    "relative_path":"rendered_video.mov"
+                    }
+    ]
+}
